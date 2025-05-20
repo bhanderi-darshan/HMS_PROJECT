@@ -1,0 +1,239 @@
+/* Page Banner */
+.page-banner {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-content h1 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb {
+    font-size: 1rem;
+}
+
+.breadcrumb a {
+    color: var(--light-gray);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+}
+
+.breadcrumb span {
+    color: var(--secondary-color);
+}
+
+/* Our Story Section */
+.our-story .container,
+.our-vision .container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.story-content,
+.vision-content {
+    flex: 1;
+}
+
+.story-image,
+.vision-image {
+    flex: 1;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.story-image img,
+.vision-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.story-image:hover img,
+.vision-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Our Vision Section */
+.our-vision {
+    background-color: var(--off-white);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-medium);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: var(--spacing-lg);
+}
+
+.member-info h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.member-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: var(--off-white);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.achievement-item {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-medium);
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.achievement-item h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.testimonial-item {
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-content {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonial-author {
+    margin-top: var(--spacing-md);
+}
+
+.testimonial-author h4 {
+    margin-bottom: 0;
+}
+
+.testimonial-author p {
+    color: var(--dark-gray);
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .team-grid,
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-story .container,
+    .our-vision .container {
+        flex-direction: column;
+    }
+    
+    .story-content,
+    .vision-content,
+    .story-image,
+    .vision-image {
+        width: 100%;
+    }
+    
+    .vision-image {
+        order: -1;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .story-image {
+        margin-top: var(--spacing-lg);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-grid,
+    .achievements-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}

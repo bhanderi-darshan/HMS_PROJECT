@@ -1,0 +1,334 @@
+/* Page Banner */
+.page-banner {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-content h1 {
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb {
+    font-size: 1rem;
+}
+
+.breadcrumb a {
+    color: var(--light-gray);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+}
+
+.breadcrumb span {
+    color: var(--secondary-color);
+}
+
+/* Services Intro */
+.services-intro {
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+}
+
+/* Services List */
+.service-item {
+    display: flex;
+    margin-bottom: var(--spacing-xxl);
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.service-item.even {
+    flex-direction: row;
+}
+
+.service-item.odd {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+    max-width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.service-item:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-details {
+    flex: 1.5;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-details h3 {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.service-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.service-description {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-highlights {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-highlights h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-highlights ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.service-highlights li {
+    display: flex;
+    align-items: center;
+}
+
+.service-highlights li i {
+    color: var(--secondary-color);
+    margin-right: var(--spacing-sm);
+}
+
+.service-hours {
+    margin-bottom: var(--spacing-md);
+}
+
+.service-hours i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-sm);
+}
+
+.service-price {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-price span {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.service-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: auto;
+}
+
+/* Additional Services */
+.additional-services {
+    background-color: var(--off-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.additional-service {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-medium);
+}
+
+.additional-service:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.additional-service h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Spa Packages */
+.spa-packages {
+    background-color: var(--white);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+}
+
+.package-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.package-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.package-card:hover .package-image img {
+    transform: scale(1.1);
+}
+
+.package-details {
+    padding: var(--spacing-lg);
+}
+
+.package-details h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.package-duration {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.package-duration i {
+    margin-right: var(--spacing-xs);
+}
+
+.package-description {
+    margin-bottom: var(--spacing-md);
+}
+
+.package-includes {
+    margin-bottom: var(--spacing-md);
+}
+
+.package-includes span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.package-includes ul {
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+}
+
+.package-includes li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.package-price {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.package-price span {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-highlights ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-item.even,
+    .service-item.odd {
+        flex-direction: column;
+    }
+    
+    .service-image {
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-actions {
+        flex-direction: column;
+    }
+    
+    .service-actions a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
